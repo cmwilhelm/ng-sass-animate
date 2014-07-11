@@ -1,0 +1,31 @@
+@import 'ng-sass-animate';
+
+.scenarioA {
+  @include ng-animate-trans;
+  @include two-state-off {
+    opacity: 0;
+    color: black;
+  }
+  @include two-state-on {
+    opacity: 1;
+    color: red;
+  }
+}
+
+.scenarioB {
+  @include ng-animate-trans;
+  @include three-state-enter-from {
+    opacity: 0;
+    color: black;
+  }
+  @include three-state-on {
+    opacity: 1;
+    color: red;
+    background: white;
+  }
+  @include three-state-exit-to {
+    opacity: 0;
+    color: purple;
+    background: black;
+  }
+}
