@@ -5,14 +5,15 @@
 .scenarioA {
   opacity: 1;
   color: red; }
-  .scenarioA.ng-enter {
+  .scenarioA.ng-enter, .scenarioA.ng-hide {
     transition: 1s linear all; }
-  .scenarioA.ng-leave {
+  .scenarioA.ng-leave, .scenarioA.ng-hide-remove, .scenarioA.ng-hide-add {
+    display: block !important;
     transition: 1s linear all; }
-  .scenarioA.ng-enter, .scenarioA.ng-leave.ng-leave-active {
+  .scenarioA.ng-enter, .scenarioA.ng-leave.ng-leave-active, .scenarioA.ng-hide-add.ng-hide-add-active, .scenarioA.ng-hide-remove {
     opacity: 0;
     color: black; }
-  .scenarioA.ng-enter.ng-enter-active, .scenarioA.ng-leave {
+  .scenarioA.ng-enter.ng-enter-active, .scenarioA.ng-leave, .scenarioA.ng-hide-remove.ng-hide-remove-active, .scenarioA.ng-hide-add {
     opacity: 1;
     color: red; }
 
@@ -20,9 +21,10 @@
   opacity: 1;
   color: red;
   background: white; }
-  .scenarioB.ng-enter {
+  .scenarioB.ng-enter, .scenarioB.ng-hide {
     transition: 1s linear all; }
-  .scenarioB.ng-leave {
+  .scenarioB.ng-leave, .scenarioB.ng-hide-remove, .scenarioB.ng-hide-add {
+    display: block !important;
     transition: 1s linear all; }
   .scenarioB.ng-enter {
     opacity: 0;
