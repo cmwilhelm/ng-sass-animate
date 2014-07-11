@@ -1,0 +1,37 @@
+/* sassy */
+/* Two states: on and off. Off is when ng-if evaluates false,
+   on is when ng-if evaluates true.
+*/
+.scenarioA {
+  opacity: 1;
+  color: red; }
+  .scenarioA.ng-enter {
+    transition: 1s linear all; }
+  .scenarioA.ng-leave {
+    transition: 1s linear all; }
+  .scenarioA.ng-enter, .scenarioA.ng-leave.ng-leave-active {
+    opacity: 0;
+    color: black; }
+  .scenarioA.ng-enter.ng-enter-active, .scenarioA.ng-leave {
+    opacity: 1;
+    color: red; }
+
+.scenarioB {
+  opacity: 1;
+  color: red;
+  background: white; }
+  .scenarioB.ng-enter {
+    transition: 1s linear all; }
+  .scenarioB.ng-leave {
+    transition: 1s linear all; }
+  .scenarioB.ng-enter {
+    opacity: 0;
+    color: black; }
+  .scenarioB.ng-enter.ng-enter-active, .scenarioB.ng-leave {
+    opacity: 1;
+    color: red;
+    background: white; }
+  .scenarioB.ng-leave.ng-leave-active {
+    opacity: 0;
+    color: purple;
+    background: black; }

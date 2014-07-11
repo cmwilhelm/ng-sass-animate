@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html ng-app="SassNgAnimate">
+
+<head>
+
+<script src="../js/angular.min.js"></script>
+<script src="../js/angular-animate.min.js"></script>
+<link rel="stylesheet" href="../sass/style.css">
+
+<script>
+
+angular.module("SassNgAnimate", ['ngAnimate']);
+
+</script>
+
+
+</head>
+
+<section id="show">
+  <h1>ngShow</h1>
+
+  <div>
+    <h2> Scenario A -- 2-State</h2>
+    <div id="showScenarioA" 
+         ng-init="showScenarioA = true"
+         ng-show="showScenarioA"
+         class="scenarioA">
+      hello
+    </div>
+
+    <button ng-click="showScenarioA = !showScenarioA">
+      Toggle
+    </button>
+  </div>
+
+  <div>
+    <h2> Scenario B -- 3-State</h2>
+    <div id="showScenarioB" 
+         ng-init="showScenarioB = true"
+         ng-show="showScenarioB"
+         class="scenarioB">
+      hello
+    </div>
+
+    <button ng-click="showScenarioB = !showScenarioB">
+      Toggle
+    </button>
+  </div>
+
+  <div>
+    <h2> Scenario C -- 4-State</h2>
+    <div id="showScenarioC" 
+         ng-init="showScenarioC = true"
+         ng-show="showScenarioC"
+         class="scenarioC">
+      hello
+    </div>
+
+    <button ng-click="showScenarioC = !showScenarioC">
+      Toggle
+    </button>
+  </div>
+
+</section>
+
+<section id="hide">
+  <h1>ngHide</h1>
+
+  <div>
+    <h2> Scenario A -- 2-State</h2>
+    <div id="hideScenarioA" 
+         ng-init="hideScenarioA = true"
+         ng-hide="hideScenarioA"
+         class="scenarioA">
+      hello
+    </div>
+
+    <button ng-click="hideScenarioA = !hideScenarioA">
+      Toggle
+    </button>
+  </div>
+
+  <div>
+    <h2> Scenario B -- 3-State</h2>
+    <div id="hideScenarioB" 
+         ng-init="hideScenarioB = true"
+         ng-hide="hideScenarioB"
+         class="scenarioB">
+      hello
+    </div>
+
+    <button ng-click="hideScenarioB = !hideScenarioB">
+      Toggle
+    </button>
+  </div>
+
+  <div>
+    <h2> Scenario C -- 4-State</h2>
+    <div id="hideScenarioC" 
+         ng-init="hideScenarioC = true"
+         ng-hide="hideScenarioC"
+         class="scenarioC">
+      hello
+    </div>
+
+    <button ng-click="hideScenarioC = !hideScenarioC">
+      Toggle
+    </button>
+  </div>
+
+</section>
+
+<section id="if">
+  <h1>ngif</h1>
+
+  <div>
+    <h2> Scenario A -- 2-State</h2>
+    <div id="ifScenarioA" 
+         ng-init="ifScenarioA = true"
+         ng-if="ifScenarioA"
+         class="scenarioA">
+      hello
+    </div>
+
+    <button ng-click="ifScenarioA = !ifScenarioA">
+      Toggle
+    </button>
+  </div>
+
+  <div>
+    <h2> Scenario B -- 3-State</h2>
+    <div id="ifScenarioB" 
+         ng-init="ifScenarioB = true"
+         ng-if="ifScenarioB"
+         class="scenarioB">
+      hello
+    </div>
+
+    <button ng-click="ifScenarioB = !ifScenarioB">
+      Toggle
+    </button>
+  </div>
+
+  <div>
+    <h2> Scenario C -- 4-State</h2>
+    <div id="ifScenarioC" 
+         ng-init="ifScenarioC = true"
+         ng-if="ifScenarioC"
+         class="scenarioC">
+      hello
+    </div>
+
+    <button ng-click="ifScenarioC = !ifScenarioC">
+      Toggle
+    </button>
+  </div>
+
+</section>
+
+
+
+
+
+</html>

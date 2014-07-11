@@ -1,0 +1,74 @@
+/* sassy */
+
+$defTrans: 1s linear all;
+
+@mixin ng-animate-trans($transition1: $defTrans, $transition2: $defTrans) {
+  &.ng-enter {
+    transition: $transition1;
+  }
+  &.ng-leave {
+    transition: $transition2;
+  }
+}
+
+/* Two states: on and off. Off is when ng-if evaluates false,
+   on is when ng-if evaluates true.
+*/
+@mixin two-state-off {
+  &.ng-enter, &.ng-leave.ng-leave-active {
+    @content;
+  }
+}
+@mixin two-state-on {
+  &.ng-enter.ng-enter-active, &.ng-leave {
+    @content;
+  }
+  @content;
+}
+
+@mixin three-state-enter-from {
+  &.ng-enter {
+    @content;
+  }
+}
+@mixin three-state-on {
+  &.ng-enter.ng-enter-active, &.ng-leave {
+    @content;
+  }
+  @content;
+}
+@mixin three-state-exit-to {
+  &.ng-leave.ng-leave-active {
+    @content;
+  }
+}
+
+.scenarioA {
+  @include ng-animate-trans;
+  @include two-state-off {
+    opacity: 0;
+    color: black;
+  }
+  @include two-state-on {
+    opacity: 1;
+    color: red;
+  }
+}
+
+.scenarioB {
+  @include ng-animate-trans;
+  @include three-state-enter-from {
+    opacity: 0;
+    color: black;
+  }
+  @include three-state-on {
+    opacity: 1;
+    color: red;
+    background: white;
+  }
+  @include three-state-exit-to {
+    opacity: 0;
+    color: purple;
+    background: black;
+  }
+}
